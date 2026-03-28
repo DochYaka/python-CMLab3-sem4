@@ -1,5 +1,5 @@
-from task1.task1 import graph_Interpolation_Polynomial
-from matrixSolution import gauss_with_pivot
+import Logic
+from task1 import graphs
 
 # Данные
 x_points = [-2, 0, 1, 3, 5]
@@ -17,6 +17,16 @@ A = [ [1, -2, 4, -8, 16],
     [1,  5,25,125,625] ]
 b = [7, 6, 10, 9, 10]
 
-a = gauss_with_pivot(A, b)
+graphs.graph_Interpolation_Polynomial(x_points, y_points, A, b)
 
-graph_Interpolation_Polynomial(x_points, y_points, a)
+
+# Задание 1.2 | построение графика интерполяционного многочлена 
+# в форме Лагранжа по заданным точкам.
+
+graphs.graph_Interpolation_Polynomial_Lagrange_Form(x_points, y_points)
+
+
+# Задание 1.3 | построение графика интерполяционного многочлена 
+# в форме Ньютона по заданным точкам.
+
+graphs.graph_Interpolation_Polynomial_Newton_Form(x_points, y_points)
